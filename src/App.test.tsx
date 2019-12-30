@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import App from './App';
+import Calculator from './App';
 import { unmountComponentAtNode } from 'react-dom';
 
 
@@ -22,7 +22,7 @@ afterEach(() => {
 it('Should be able to perform sum operation', ()=>{
 
   act(() => {
-    render(<App />, container);
+    render(<Calculator />, container);
   });
 
   let seven = document.getElementsByClassName('seven')[0];
@@ -32,6 +32,10 @@ let plus = document.getElementsByClassName('plus')[0];
 plus.dispatchEvent(new Event('click', {bubbles: true}));
 
   let nine = document.getElementsByClassName('nine')[0];
-  nine.dispatchEvent(new Event('click', {bubbles: true}))
+  nine.dispatchEvent(new Event('click', {bubbles: true}));
+
+
+  let result = document.querySelector('.display .result') as HTMLElement;
+  expect(result.innerText).toBe('16')
 
 })

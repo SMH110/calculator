@@ -5,6 +5,12 @@
   margin: 20px auto;
   border: 1px solid #8186d5;
   box-shadow: 1px 2px #464a8a;
+ 
+ 
+}
+
+
+.buttons {
+  display: flex;
   box-sizing: content-box;
-  display: flex
 }
