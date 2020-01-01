@@ -1,8 +1,7 @@
-import React from 'react';
-import { render, act } from '@testing-library/react';
-import Calculator from './App';
-import { unmountComponentAtNode } from 'react-dom';
-
+import React from "react";
+import { render, act } from "@testing-library/react";
+import Calculator from "./App";
+import { unmountComponentAtNode } from "react-dom";
 
 let container = null;
 beforeEach(() => {
@@ -19,23 +18,23 @@ afterEach(() => {
   container = null;
 });
 
-it('Should be able to perform sum operation', ()=>{
-
+it("Should be able to perform sum operation", () => {
   act(() => {
     render(<Calculator />, container);
   });
 
-  let seven = document.getElementsByClassName('seven')[0];
-  seven.dispatchEvent(new Event('click', {bubbles: true}));
+  let seven = document.getElementsByClassName("seven")[0];
+  seven.dispatchEvent(new Event("click", { bubbles: true }));
 
-let plus = document.getElementsByClassName('plus')[0];
-plus.dispatchEvent(new Event('click', {bubbles: true}));
+  let plus = document.getElementsByClassName("plus")[0];
+  plus.dispatchEvent(new Event("click", { bubbles: true }));
 
-  let nine = document.getElementsByClassName('nine')[0];
-  nine.dispatchEvent(new Event('click', {bubbles: true}));
+  let nine = document.getElementsByClassName("nine")[0];
+  nine.dispatchEvent(new Event("click", { bubbles: true }));
 
+  let equal = document.getElementsByClassName("equal")[0];
+  equal.dispatchEvent(new Event("click", { bubbles: true }));
 
-  let result = document.querySelector('.display .result') as HTMLElement;
-  expect(result.innerText).toBe('16')
-
-})
+  let result = document.querySelector(".display .result") as HTMLElement;
+  expect(result.innerText).toBe("16");
+});
