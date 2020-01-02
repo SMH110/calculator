@@ -1,18 +1,23 @@
 .calc-button {
-    width:25%;
-    height: 50px;
-    border: none;
-    margin: 5px;
-    background-color: #e3e7f1;
-    color: #494ca2;
-    font-size: 1.5rem;
-    border-radius: 2px;
-    box-sizing: content-box;
-    
+  width: 33.33%;
+  height: 110px;
+  border: none;
+  margin: 5px;
+  background-color: #e3e7f1;
+  color: #494ca2;
+  font-size: 2.5rem;
+  border-radius: 2px;
+  box-sizing: content-box;
+  cursor: pointer;
 }
 
-
 .calc-button:hover {
-    background-color: #ffffff;
-    color: #373a91;
+  background-color: #ffffff;
+  color: #373a91;
+}
+
+@media only screen and (min-width: 1400px) {
+  .calc-button {
+    height: 150px;
+  }
 }

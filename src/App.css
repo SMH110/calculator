@@ -9,8 +9,27 @@
  
 }
 
-
-.buttons {
+.row {
+  width: 100%;
   display: flex;
-  box-sizing: content-box;
 }
+
+
+
+@media only screen and (max-width: 1200px) {
+  .App {
+    
+    width: 80%;
+      
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .App {
+    
+    width: 90%;
+      
+  }
+}
+
